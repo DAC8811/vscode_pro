@@ -1,0 +1,27 @@
+vscode推荐安装的插件：
+  1.C/C++
+  2.C++ Intellisense
+  3.Code Runner
+  4.Include Autocomplete
+  
+Code Runner配置
+  1.File->Preference->settings 搜索run code
+  2.点击打开Executor Map下的Edit in settings.json
+  3.输入"code-runner.executorMap":   ，并根据提示自动补齐按回车键
+  4.在对应的语言处进行修改
+  
+Debug配置
+  1.点击Debug按钮，打开launch.json
+  2.将"preLaunchTask"处内容改为"preLaunchTask": "build"
+  3.打开tasks.json,加入
+    "tasks": [
+    {
+        "label": "build",
+        "type": "shell",
+        "command": "make",            //主要的就是这个，表示执行make命令（注，文件夹下需要Makefile文件）     
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }
+  ],
