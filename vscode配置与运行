@@ -25,3 +25,7 @@ Debug配置
         }
     }
   ],
+  
+C/C++路径配置
+  1.ctrl + shift + p，键入C/Cpp : Edit Configurations，打开c_cpp_properties.json文件
+  2.在"includePath": 后添加路径
